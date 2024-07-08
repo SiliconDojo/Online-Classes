@@ -5,6 +5,10 @@ This is the repository of resources for the online classes.  Each classes materi
 
 I give you full permission to use these materials as you see fit, and you can use them if youn want to teach your own classes.
 
+## Support Silicon Dojo with Donorbox
+
+Click here to tip money to Eli -> https://donorbox.org/etcg
+
 ## Installing Python 3 and VSCode
 
 For Mac OS
