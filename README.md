@@ -19,3 +19,8 @@ For Ubuntu
 
 For Windows
   -Follow Instructions in Python/ Windows Install Doc.
+
+Verify Python 3 is installed
+  - For MacOS and Ubuntu go to terminal and then run the command: python3 --version
+  - For Windows go to the Command Prompt and run: python --version
+  - You should get a version of 3.12.something
