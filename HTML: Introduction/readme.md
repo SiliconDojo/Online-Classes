@@ -1,6 +1,6 @@
 # HTML: Introduction
 
-## Video - 
+## Video - https://youtu.be/8R5y-0wCh1c
 
 This class will be on the basic concepts of HTML. HTML or Hyper Text Markup Language creates the foundation of your website or web app. Using Tags you are able to build a structure for your project and from there you can add CSS and Javascript to add formatting and functionality.
 
