@@ -1,0 +1,37 @@
+<style>
+    div {
+        height: 300px;
+        width: 300px;
+        background-color: gray;
+    }
+    @keyframes color {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+    }
+
+    div.color {
+        animation-name: color;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes move {
+        0%   {left: 0px;}
+        25%  {left: 100px;}
+        50%  {left: 400px;}
+        100% {left: 800px;}
+    }
+    
+    div.move {
+        position: relative;
+        animation-name: move;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+</style>
+
+<div class="color"></div>
+<br>
+<div class="move"></div>
