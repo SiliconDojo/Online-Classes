@@ -17,6 +17,5 @@ The class will go over:
 
 ### Teachers Note for Future Classes
 
-Explain and demonstrate DIV's better
-
-Demonstrate display: property better with demos of each setting
+- Explain and demonstrate DIV's better
+- Demonstrate display: property better with demos of each setting
