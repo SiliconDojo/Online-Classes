@@ -13,3 +13,10 @@ The class will go over:
 - Image Editing with CSS
 - Animations with CSS
 - How languages like Python build a dynamic web app with CSS
+
+
+### Teachers Note for Future Classes
+
+Explain and demonstrate DIV's better
+
+Demonstrate display: property better with demos of each setting
