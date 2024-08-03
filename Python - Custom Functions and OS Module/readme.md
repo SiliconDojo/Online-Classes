@@ -1,6 +1,6 @@
 # Python - Custom Functions and OS Module 
 
-## Video - 
+## Video - https://youtu.be/6Zl8vBkKAWQ
 
 This class will show you how to use Python to send commands to the Operating System and also allow Python to access the return from the command. This means that your Python app can gain all the functionality that exists on your Operating System
 
