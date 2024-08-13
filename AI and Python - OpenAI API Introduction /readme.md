@@ -1,4 +1,4 @@
-# Python - OpenAI API Introduction
+# AI and Python - OpenAI API Introduction
 
 
 ## Video - https://youtu.be/I6T9Ztn0S-M
