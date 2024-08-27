@@ -25,7 +25,7 @@ def index():
                                 {data_html}
                             '''
     except:
-        data = ''
+        data_html = ''
 
     page = f'{form} <br> {data_html}'
 
