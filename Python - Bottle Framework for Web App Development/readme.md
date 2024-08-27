@@ -29,6 +29,10 @@ The class will go over:
 
 python3 -m pip install bottle
 
+create a "views" folder in your root directory for your template files
+
+create a "static" folder in your root directory for your static files
+
 
 ### Teachers Note for Future Classes
 
