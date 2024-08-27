@@ -1,7 +1,7 @@
 # AI and Python - Ollama for Local LLM AI Usage
 
 
-## Video - 
+## Video -  https://youtu.be/qz5VipuXHts?si=UpxH2pSdeIxASkO-
 
 
 ## Description
