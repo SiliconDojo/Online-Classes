@@ -1,11 +1,5 @@
 import sqlite3
 
-conn = sqlite3.connect('lab.db')
-cursor = conn.cursor()
-cursor.execute('CREATE TABLE IF NOT EXISTS student(name,age,allergy)')
-conn.commit()
-conn.close()
-
 def fetch(name):
     conn = sqlite3.connect('lab.db')
     cursor = conn.cursor()
