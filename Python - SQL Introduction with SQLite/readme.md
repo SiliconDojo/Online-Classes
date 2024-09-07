@@ -1,7 +1,7 @@
 # Python - SQL Introduction with SQLite
 
 
-## Video - 
+## Video - https://youtu.be/C9Iops9PtdE
 
 
 ## Description
