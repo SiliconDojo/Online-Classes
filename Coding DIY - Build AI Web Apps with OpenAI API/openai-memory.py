@@ -6,9 +6,6 @@ import sqlite3
 
 client = OpenAI(api_key=' ')
 
-injection_rules = '''
-                    limit answers to under 50 words
-                    '''
 header = f'''
             <h1>Open AI App</h1>
             <p><a href="/">Home</a> <a href="/memory">Memory<a></p>
