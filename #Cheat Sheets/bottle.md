@@ -118,3 +118,42 @@ def send_static(filename):
 
 run(host='localhost', port=8080)
 ```
+
+
+## Templates
+
+```
+from bottle import run, route, template
+
+@route('/hello')
+def hello():
+    return template('hello_template')
+
+@route('/hello-var/<name>')
+def hello_var(name):
+    return template('hello_var_template', name=name)
+
+run(host='localhost', port=8080)
+```
+
+Template Files should be in a folder called **views** in your root directory
+
+**hello_template.tpl**
+```
+<h1>Hello World</h1>
+
+<p>This is a template</p>
+
+<p>Templates are HTML files that you can add variables values to</p>
+```
+
+**hello_var_template.tpl**
+```
+<h1>Hello {{ name }}</h1>
+
+%if name == 'bob':
+    <h1>{{ name }} is awesome!!!</h1>
+%else:
+    <h1>{{ name }} is not as cool as Bob!</h1>
+%end
+```
