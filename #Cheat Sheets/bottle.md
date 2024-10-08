@@ -1,5 +1,46 @@
 # Bottle Web App Framework
 
+## Static Route
+
+```
+from bottle import run, route
+
+@route('/')
+def index():
+    message = '<h1>Hello World</h1>'
+    return message
+
+@route('/about')
+def about():
+    message = '<h1>I am so cool!!!</h1>'
+    return message
+
+run(host='localhost', port=8080)
+```
+
+## Dynamic Route
+
+```
+from bottle import run, route
+
+@route('/name/<name>')
+def index(name):
+    message = f'<h1>Hello {name}</h1>'
+    return message
+
+@route('/name/<name>/<age:int>')
+def name_age(name, age):
+    message = f'<h1>Hello {name} you are {age} years old</h1>'
+    return message
+
+@route('/<message>')
+def name_age(message):
+    message = message
+    return message
+
+run(host='localhost', port=8080)
+```
+
 ## POST
 ```
 from bottle import run, route, post
@@ -46,6 +87,34 @@ def index():
                 </body>
             '''
     return page
+
+run(host='localhost', port=8080)
+```
+
+## Static Files
+
+Make sure that permissions are setup properly so that users can access the folder and files. 
+
+```
+from bottle import run, route, static_file
+
+@route('/')
+def index():
+    file = 'image.png'
+    page = f'''
+                <link rel="stylesheet" type="text/css" href="/static/style.css">
+                <body>
+                    <h1>Static File</h1>
+                    <img style="height:300px; width:auto;" src="/static/{file}">
+                    <p>This is an embedded picture</p>
+                </body>
+            '''
+    return page
+
+@route('/static/<filename:path>')
+def send_static(filename):
+    print(filename)
+    return static_file(filename, root='./static/')
 
 run(host='localhost', port=8080)
 ```
