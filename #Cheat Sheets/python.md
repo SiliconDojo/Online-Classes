@@ -49,6 +49,26 @@ while x <= 10:
   x += 1
 ```
 
+## Sets
+
+### Add to List
+```
+my_list = ['tim','sue','phil']
+name = bob
+
+my_list.append(name)
+
+```
+
+### Delete from List
+
+```
+my_list = ['tim','sue','phil','bob']
+name = bob
+
+my_list.pop(name)
+
+```
 
 ## File Paths
 
