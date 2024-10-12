@@ -33,7 +33,22 @@ finally:
 
 ### For Loops
 
+```
+my_list = ['bob','sue','tim']
+
+for x in my_list:
+  print(x)
+```
+
 ### While Loops
+
+```
+x = 0
+while x <= 10:
+  print(x)
+  x += 1
+```
+
 
 ## File Paths
 
