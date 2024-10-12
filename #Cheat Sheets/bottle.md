@@ -189,4 +189,14 @@ Binds Web App to Local Host at Port 8080
 gunicorn -w 4 -b 127.0.0.1:8080 web-test:app
 ```
 
+### Run with Gunicorn from run()
+```
+from bottle import route, run
+
+@route('/')
+def index():
+    return "Hello, Bottle app is running with run() and gunicorn"
+
+run(server='gunicorn',host='0.0.0.0', port='8080')
+```
 
