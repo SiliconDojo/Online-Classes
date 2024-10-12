@@ -20,6 +20,17 @@ else:
 
 ### Try / Except Statements
 
+```
+try:
+  #do something such as an OS command
+except:
+  #if command fails do this
+else:
+  #if command works also do this
+finally:
+  #whether it works or not do this at the end
+```
+
 ### For Loops
 
 ### While Loops
