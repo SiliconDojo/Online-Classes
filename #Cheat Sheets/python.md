@@ -1,3 +1,31 @@
+## Basics
+
+### If/ Elif/ Else Statements
+
+```
+if x >= 0:
+  print('positive')
+else:
+  print('negative')
+```
+
+```
+if x >= 10:
+  print('big')
+elif x >=5 and x < 10:
+  print('medium')
+else:
+  print('small')
+```
+
+### Try / Except Statements
+
+### For Loops
+
+### While Loops
+
+## File Paths
+
 ### File Path
 Creates a file path based on operating system requirements
 
