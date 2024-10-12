@@ -1,5 +1,18 @@
 ## Basics
 
+## Concatenation
+
+### F Strings
+
+```
+name = 'bob'
+
+greeting = 'hello'
+
+print(f'{greeting} {name}')
+```
+
+
 ### If/ Elif/ Else Statements
 
 ```
