@@ -62,12 +62,21 @@ my_list.append(name)
 
 ### Delete from List
 
+
+Remove Based on Index:
+```
+my_list = ['tim','sue','phil','bob']
+
+my_list.pop(3)
+
+```
+
+Remove Based on Value:
 ```
 my_list = ['tim','sue','phil','bob']
 name = bob
 
-my_list.pop(name)
-
+my_list.remove(name)
 ```
 
 ## File Paths
