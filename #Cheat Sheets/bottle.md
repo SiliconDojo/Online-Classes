@@ -183,8 +183,10 @@ app = default_app()
 ```
 
 Run Gunicorn. Point to Script and App Instance
+
+Binds Web App to Local Host at Port 8080
 ```
-gunicorn -w 4 web-test:app
+gunicorn -w 4 -b 127.0.0.1:8080 web-test:app
 ```
 
 
