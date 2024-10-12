@@ -51,7 +51,8 @@ while x <= 10:
 
 ## Sets
 
-### Add to List
+### Lists
+#### Add to List
 ```
 my_list = ['tim','sue','phil']
 name = bob
@@ -60,7 +61,7 @@ my_list.append(name)
 
 ```
 
-### Delete from List
+#### Delete from List
 
 
 Remove Based on Index:
