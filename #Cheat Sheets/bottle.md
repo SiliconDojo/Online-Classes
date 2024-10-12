@@ -157,3 +157,33 @@ Template Files should be in a folder called **views** in your root directory
     <h1>{{ name }} is not as cool as Bob!</h1>
 %end
 ```
+
+## Run Bottle with Gunicorn
+
+Install Gunicorn
+```
+python3 -m pip install gunicorn
+```
+
+Create App Instance Using default_app()
+**web-test.py**
+```
+from bottle import route, default_app
+
+@route('/')
+def index():
+    return "Hello, Bottle app is running without calling run()!"
+
+@route('/hello')
+def hello():
+    return "Hello dude how ya doing??"
+
+app = default_app()
+```
+
+Run Gunicorn. Point to Script and App Instance
+```
+gunicorn -w 4 web-test:app
+```
+
+
