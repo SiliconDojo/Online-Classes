@@ -12,6 +12,7 @@ greeting = 'hello'
 print(f'{greeting} {name}')
 ```
 
+## Statements
 
 ### If/ Elif/ Else Statements
 
@@ -43,6 +44,8 @@ else:
 finally:
   #whether it works or not do this at the end
 ```
+
+## Loops
 
 ### For Loops
 
