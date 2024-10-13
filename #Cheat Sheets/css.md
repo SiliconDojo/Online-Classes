@@ -23,3 +23,18 @@ This creates a caption on the DIV Box 5px from the bottom and 5px from the left.
 </div>
 </div>
 ```
+
+## Inline Responsive DIV - display:inline-block
+
+This makes the DIV boxes be displayed inline, and they regroup as the page is resized
+
+```
+<div style="border:5px solid red;">
+<div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
+<div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
+<div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
+<div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
+<div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
+<div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
+</div>
+```
