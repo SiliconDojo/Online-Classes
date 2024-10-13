@@ -28,6 +28,11 @@ This creates a caption on the DIV Box 5px from the bottom and 5px from the left.
 
 This makes the DIV boxes be displayed inline, and they regroup as the page is resized
 
+<img width="400" alt="Screenshot 2024-10-13 at 10 21 49 AM" src="https://github.com/user-attachments/assets/4294aee7-ce44-4020-a7b8-e58a7b015c3b">
+
+
+<img width="200" alt="Screenshot 2024-10-13 at 10 21 37 AM" src="https://github.com/user-attachments/assets/6ae55bdf-a229-4680-ae2d-8174f4960589">
+
 ```
 <div style="border:5px solid red;">
 <div style="display:inline-block;border:5px solid black; height:200px; width:200px;"></div>
