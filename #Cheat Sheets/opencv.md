@@ -6,7 +6,7 @@ This is the standard script for object detection with the computers webcam.
 
 **NOTE:** Camera Number is 0 by default, but on ARM Mac Systems you may need to change to 1
 
-<img width="300" alt="Screenshot 2024-10-13 at 11 09 24 AM" src="https://github.com/user-attachments/assets/12a24533-136f-4958-997a-d9563c8bd94b">
+<img width="400" alt="Screenshot 2024-10-13 at 11 09 24 AM" src="https://github.com/user-attachments/assets/12a24533-136f-4958-997a-d9563c8bd94b">
 
 
 ```
