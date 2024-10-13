@@ -5,7 +5,8 @@
 
 This creates a DIV Box that contains a picture.  On the picture a 150px by 150px Bounding Box is drawn that starts 200px from the top, and 210px from the left.
 
-<img width="656" alt="Screenshot 2024-10-13 at 10 26 27 AM" src="https://github.com/user-attachments/assets/ff079df9-35a2-438d-954f-43e3d867ae4f">
+<img width="650" alt="Screenshot 2024-10-13 at 10 33 17 AM" src="https://github.com/user-attachments/assets/713d3410-5a61-4929-9a03-0af3d77e6c7c">
+
 
 ```
 <div style="position:relative;">
