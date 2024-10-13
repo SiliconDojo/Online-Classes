@@ -17,13 +17,18 @@ This creates a DIV Box that contains a picture.  On the picture a 150px by 150px
 
 ## Caption DIV Box
 
-This creates a caption on the DIV Box 5px from the bottom and 5px from the left. This can be used to caption images.
+This creates a caption on the DIV Box 400px from the top and 10px from the left. This can be used to caption images.
+
+<img width="646" alt="Screenshot 2024-10-13 at 10 43 09 AM" src="https://github.com/user-attachments/assets/df1e29d0-f1fd-41cc-9746-1e2ec305f102">
 
 ```
-<div style="position:relative; border:5px solid black; height:200px; width:200px;">
-<div style="position:absolute; bottom:5px; left:5px;">
-    <p>hello world</p>
-</div>
+div style="position:relative;">
+    <img src="./picture.jpg">
+    <div style="position:absolute; background-color:lightgray;top:400px; left:10px;">
+        <p>
+            This is a cute puppy
+        </p>
+    </div>
 </div>
 ```
 
