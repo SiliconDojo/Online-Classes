@@ -158,6 +158,28 @@ Template Files should be in a folder called **views** in your root directory
 %end
 ```
 
+## Cookies
+
+```
+from bottle import route, run, response, request 
+
+@route('/set')
+def index():
+    name = 'bob'
+    response.set_cookie('username', name)
+    return f'Setting Cookie for Username to {name}'
+
+@route('/who')
+def who():
+    username = request.get_cookie('username')
+    if username:
+        return f'Hello, {username}!'
+    else:
+        return 'No Cookie Found'
+
+run(host='localhost', port='8080')
+```
+
 ## Run Bottle with Gunicorn
 
 Install Gunicorn
