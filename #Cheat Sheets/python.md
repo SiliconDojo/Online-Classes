@@ -95,6 +95,49 @@ name = bob
 
 my_list.remove(name)
 ```
+## Files
+
+**Modes:**
+
+  **a** - appends to end of file
+  
+  **a+** - appends and creates files if it does not exist
+  
+  **r** - reads from file
+  
+  **w** - overwrites any data in file
+  
+  **rb, ab, wb** - used for data files such as audio or video
+
+** with open() statement**
+
+with open() function automatically closes file when statement is finished.
+```
+with open('file.txt', 'r') as file:
+  file = file.read()
+
+with open('file.txt', 'a') as file:
+  file = file.write('something cool')
+```
+
+**Read Object Into String**
+```
+read() 
+```
+
+**Read Object Into a List Divided by Lines**
+```
+readlines()
+```
+
+**open()**
+
+You must close the file with close()
+```
+file = open('file.txt', 'r')
+file = file.read()
+file.close()
+```
 
 ## File Paths
 
