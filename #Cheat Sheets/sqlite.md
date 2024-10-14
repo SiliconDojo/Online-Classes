@@ -81,6 +81,12 @@ rows = cursor.fetchall()
 conn.close()
 
 ```
+
+**With WHERE Filter**
+```
+cursor.execute("SELECT * FROM people WHERE age > ?", (30,))
+
+```
 **Fetch All Record**
 
 Generally what you will use.
