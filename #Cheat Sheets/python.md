@@ -109,7 +109,7 @@ my_list.remove(name)
   
   **rb, ab, wb** - used for data files such as audio or video
 
-** with open() statement**
+**with open() statement**
 
 with open() function automatically closes file when statement is finished.
 ```
