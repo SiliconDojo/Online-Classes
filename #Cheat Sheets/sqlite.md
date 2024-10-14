@@ -65,6 +65,43 @@ CREATE TABLE IF NOT EXIST people (
 ) STRICT;
 ```
 
+## Select
+
+Fetch All Columns and All Records from Table and return the data as a set.
+
+```
+import sqlite3
+
+conn = sqlite3.connect('example.db')
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM people")
+rows = cursor.fetchall()
+
+conn.close()
+
+```
+**Fetch All Record**
+
+Generally what you will use.
+
+```
+fetchall()
+```
+
+**Fetch a Single Record**
+
+Good when only a single record should exist
+```
+fetchone()
+```
+
+**Fetch a Specific Number of Records**
+
+Good for when you have to process a limited number of results such as 'the last 5 occurences'
+```
+fetchmany(size)
+```
 
 ## Insert
 
