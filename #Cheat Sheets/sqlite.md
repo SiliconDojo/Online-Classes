@@ -2,6 +2,18 @@
 
 ## Create Table if Not Exist
 
+**Primary Keys and Unique ID**
+
+**ROWID** column is created by default and can be called even though it does not show up in a select * statement.  When rows are deleted the rowid value will be reused by SQLite so it is not good as a permenant identifier.
+
+**PRIMARY KEY** Auto increments by default, but if a row is deleted SQLite will reuse the value of the deleted row.
+
+**AUTOINCREMENT** Forces SQLite to continue iterating up for key values and will not reuse an ID if it is deleted. Use this for anytime a key may need to uniquely identify a record for a period of time.
+
+```
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+```
+
 **Basic Syntax**
 
 You do not have to assign data types in SQLite and even if you do they will not be strictly enforced by default.
@@ -64,4 +76,26 @@ cursor = conn.cursor()
 cursor.execute("INSERT INTO people(name,age,sex) VALUES(?,?,?)",('tom', 33, 'boy'))
 conn.commit()
 conn.close()
+```
+
+## Update or Insert
+
+This code either updates a record if one is found with the name 'tom', and if a record does not exist it creates one.
+
+```
+import sqlite3
+
+conn = sqlite3.connect('example.db')
+cursor = conn.cursor()
+
+cursor.execute('SELECT * FROM people WHERE name = ?', ('Tom',))
+record = cursor.fetchone()
+if record:
+    cursor.execute('UPDATE people SET age = ?, sex = ? WHERE name = ?', (35, 'male', 'Tom'))
+else:
+    cursor.execute('INSERT INTO people (name, age, sex) VALUES (?, ?, ?)', ('Tom', 35, 'male'))
+
+conn.commit()
+conn.close()
+
 ```
