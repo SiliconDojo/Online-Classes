@@ -1,5 +1,36 @@
 # SQLite and Python
 
+## CLI and Shell Commands
+
+Connect to database.  if no name is given a temporary one will be created.
+```
+sqlite3 DATABASE
+```
+
+Show tables in database
+```
+.tables
+```
+
+Show command used to create table
+```
+.schema TABLE
+```
+
+Display column headers hen select statement is used
+```
+.headers on
+```
+
+Display select results in columns
+```
+.mode column
+```
+
+Backup database 
+```
+.backup FILENAME
+```
 ## Create Table if Not Exist
 
 **Primary Keys and Unique ID**
