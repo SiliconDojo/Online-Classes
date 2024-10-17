@@ -222,3 +222,14 @@ def index():
 run(server='gunicorn',host='0.0.0.0', port='8080')
 ```
 
+
+## Deploy Bottle with Nginx, Gunicorn, Ubuntu
+
+```
+sudo apt install nginx
+```
+
+create directory for app
+create venv
+install gunicorn
+install bottle
