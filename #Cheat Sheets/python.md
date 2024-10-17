@@ -166,3 +166,28 @@ Creates folder, and ignores error if the folder alredy exists
 directory = 'DIRECTORY-NAME'
 os.makedirs(directory, exist_ok=True)
 ```
+
+
+## venv - Virtual Enviornment
+
+Install venv on Ubuntu
+```
+sudo apt install python3-venv
+```
+
+Create a venv folder in the same folder as your app.  Many people simply name the venv folder as venv
+```
+mdir app
+cd app
+python3 -m venv VENVNAME
+```
+
+Activate the venv and then you can install and use modules with PIP
+```
+source venv/bin/activate
+```
+
+To exit the venv
+```
+deactivate
+```
