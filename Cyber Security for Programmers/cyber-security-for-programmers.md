@@ -97,5 +97,12 @@ Security is not a single product or setting.  It's numerous layers of protection
 
 ## API Key Rotation
 
+## Virtualization / Containerization
+  The more features a device has the more vulnerabilities it has
+  
+  We used to load servers up with features because they were so expensive.  A Windows Small Business Server with AD, File Sharing, VPN, Exchange, Share Point, etc made sense when each "instance" of an OS would cost thousands of dollars.  
+  
+  Now each one of those services can be in it's own Virtual Instance or even it's own box for a very low cost.
+
 
 
