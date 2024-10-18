@@ -1,5 +1,6 @@
 # Cyber Security for Programmers
 
+
 ## NUMBER ONE ENEMY!!!
 ... is you...
 
@@ -14,15 +15,41 @@ Number 526 is... Zimbabawian Ninja Hackers...
 Every minute your systems are down your company loses money.
 
 ## Welcome to Reality
->Story: If you can find the utility closet...
+>Stories:
+>>If you can find the utility closet...
+>
+>>What do you mean you're in a flood plain, and you had me build your server room on the first floor???
 
->Story: What do you mean you're in a flood plain, and you had me build your server room on the first floor???
+### Employee Policies and Discipline Procedures
+Create written policies for what employees are supposed to do.
 
-**Policies**
+Test managers to verify that they know the policies and will enforce them
 
-**Buy In**
+Have a disciplinary policy for if employees violate rules
 
-**Don't Create More Problems**
+Know when to walk away...
+
+>Story:
+>Napster and the Sales Guy - Do you know how much he earns the company???
+
+### Get Employee Buy In
+Find non confrontational ways to get employees onboard with security policies
+
+Train employees instead of scolding them
+- Run lunch time seminars
+- Create your own "certificate" program
+
+### Don't Create More Problems
+Understand the business your organization is in, and see yourself as a partner not as a seperate entity.
+
+Running a company is hard.  You are one cog that the execs have to listen to.  Don't over estimate your value.
+
+Someone else has to manage the security that you create.  A non bootable computer won't be hacked, but is also worthless.
+
+"Shadow IT" is a credit card swipe away...
+
+>Story:
+>3 ring binder of security infrastructure for a 2 person publishing company.
 
 ## Types of Threats
 
