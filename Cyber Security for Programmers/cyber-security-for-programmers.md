@@ -38,9 +38,11 @@ Number 526 is... Zimbabawian Ninja Hackers...
 - 
 
 **Operational Security**
-- Need to Know - Can the secretary lead a hacker to the server room?
-Story - Stealing PBX Cards
-- Is Your Physical Layout Easy to Understand?
+  - Need to Know - Can the secretary lead a hacker to the server room?
+  >Story - Stealing PBX Cards
+  - Is Your Physical Layout Easy to Understand?
+  - Admittance Policies
+  - 
 
 ## Layered Security
 
