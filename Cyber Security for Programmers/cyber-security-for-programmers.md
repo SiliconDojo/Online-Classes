@@ -1,6 +1,5 @@
 # Cyber Security for Programmers
 
-
 ## NUMBER ONE ENEMY!!!
 ... is you...
 
