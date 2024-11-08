@@ -1,0 +1,16 @@
+
+<h1>JavaScript Voice Synthesizer</h1>
+<button onclick="speak()">Press Me</button>
+
+<script>
+    function speak() {
+        const message = new SpeechSynthesisUtterance("Hello, world! API's are so easy to use");
+        window.speechSynthesis.speak(message);
+    }
+    
+    // Optional: Automatically speak on page load
+    window.onload = function() {
+        speak();
+    };
+</script>
+

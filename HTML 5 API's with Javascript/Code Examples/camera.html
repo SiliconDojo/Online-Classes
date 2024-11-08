@@ -1,0 +1,51 @@
+
+<h1>Take a Picture</h1>
+<button onclick="startCamera()">Enable Camera</button>
+<button id="captureBtn" onclick="capturePhoto()" disabled>Capture Photo</button>
+<br><br>
+
+<!-- Video element with playsinline and muted attributes -->
+<video id="video" width="300" height="200" autoplay playsinline muted></video>
+<br><br>
+
+<!-- Canvas to display captured photo -->
+<canvas id="canvas" width="300" height="200"></canvas>
+
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+    const captureBtn = document.getElementById('captureBtn');
+    let stream;
+
+    // Function to start the camera
+    function startCamera() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((mediaStream) => {
+                stream = mediaStream;
+                video.srcObject = mediaStream;
+
+                // Enable the capture button once the video feed is live
+                video.onloadedmetadata = () => {
+                    captureBtn.disabled = false; // Enable capture button
+                    video.play(); // Start video playback
+                    console.log("Camera stream started successfully.");
+                };
+            })
+            .catch((error) => {
+                console.error("Error accessing camera: ", error);
+                alert("Could not access the camera. Please check permissions.");
+            });
+    }
+
+    // Function to capture the photo
+    function capturePhoto() {
+        if (!stream) {
+            alert("Camera is not enabled. Please click 'Enable Camera' first.");
+            return;
+        }
+        // Draw the current video frame on the canvas
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    }
+</script>
+

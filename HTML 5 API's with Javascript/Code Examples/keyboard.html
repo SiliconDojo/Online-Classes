@@ -1,0 +1,16 @@
+
+<h1>Press "R" or "B" to Change Background Color</h1>
+<p id="keyDisplay">Press a key to see it displayed here.</p>
+
+<script>
+    document.addEventListener('keydown', (event) => {
+        const key = event.key.toLowerCase(); // Get the key pressed and convert to lowercase
+        document.getElementById("keyDisplay").innerText = `You pressed: ${key.toUpperCase()}`;
+
+        if (key === 'r') {
+            document.body.style.backgroundColor = 'red';
+        } else if (key === 'b') {
+            document.body.style.backgroundColor = 'blue';
+        }
+    });
+</script>

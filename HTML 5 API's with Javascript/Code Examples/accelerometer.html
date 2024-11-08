@@ -1,0 +1,61 @@
+
+<h1>Shake Detection</h1>
+<button onclick="requestAccess()">Enable Shake Detection</button>
+<p id="status">Shake your device to trigger detection...</p>
+
+<script>
+    let shakeThreshold = 15; // Adjust this value as needed
+    let lastX = null;
+    let lastY = null;
+    let lastZ = null;
+
+    function requestAccess() {
+        if (typeof DeviceMotionEvent.requestPermission === 'function') {
+            DeviceMotionEvent.requestPermission()
+                .then(permissionState => {
+                    if (permissionState === 'granted') {
+                        startShakeDetection();
+                    } else {
+                        alert("Permission denied. Accelerometer access is required.");
+                    }
+                })
+                .catch(console.error);
+        } else {
+            startShakeDetection();
+        }
+    }
+
+    function startShakeDetection() {
+        window.addEventListener('devicemotion', (event) => {
+            const acceleration = event.acceleration;
+            
+            if (acceleration) {
+                let x = acceleration.x || 0;
+                let y = acceleration.y || 0;
+                let z = acceleration.z || 0;
+
+                // Check if this is the first data, so we have previous values
+                if (lastX !== null && lastY !== null && lastZ !== null) {
+                    // Calculate the change in acceleration
+                    let deltaX = Math.abs(x - lastX);
+                    let deltaY = Math.abs(y - lastY);
+                    let deltaZ = Math.abs(z - lastZ);
+
+                    // If the change in any axis exceeds the threshold, detect shake
+                    if (deltaX > shakeThreshold || deltaY > shakeThreshold || deltaZ > shakeThreshold) {
+                        document.getElementById("status").innerText = "Shake detected!";
+                        setTimeout(() => {
+                            document.getElementById("status").innerText = "Shake your device to trigger detection...";
+                        }, 1000); // Reset message after 1 second
+                    }
+                }
+
+                // Store the current values for the next comparison
+                lastX = x;
+                lastY = y;
+                lastZ = z;
+            }
+        });
+    }
+</script>
+

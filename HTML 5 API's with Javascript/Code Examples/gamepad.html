@@ -1,0 +1,48 @@
+
+<h1>Gamepad Input Display</h1>
+<p id="status">Connect a gamepad and press any button.</p>
+<div id="gamepadData"></div>
+
+<script>
+    let gamepadIndex;
+
+    // Listen for when a gamepad is connected
+    window.addEventListener("gamepadconnected", (event) => {
+        gamepadIndex = event.gamepad.index;
+        document.getElementById("status").innerText = `Gamepad connected: ${event.gamepad.id}`;
+        updateGamepadData();
+    });
+
+    // Listen for when a gamepad is disconnected
+    window.addEventListener("gamepaddisconnected", () => {
+        document.getElementById("status").innerText = "Gamepad disconnected.";
+        document.getElementById("gamepadData").innerHTML = "";
+        cancelAnimationFrame(updateGamepadData);
+    });
+
+    // Function to update and display gamepad input data
+    function updateGamepadData() {
+        const gamepad = navigator.getGamepads()[gamepadIndex];
+        if (gamepad) {
+            let html = "<h2>Buttons</h2><ul>";
+
+            // Display button states
+            gamepad.buttons.forEach((button, index) => {
+                html += `<li>Button ${index}: ${button.pressed ? "Pressed" : "Released"} (Value: ${button.value})</li>`;
+            });
+            html += "</ul><h2>Axes</h2><ul>";
+
+            // Display axis states
+            gamepad.axes.forEach((axis, index) => {
+                html += `<li>Axis ${index}: ${axis.toFixed(2)}</li>`;
+            });
+            html += "</ul>";
+
+            document.getElementById("gamepadData").innerHTML = html;
+        }
+
+        // Continuously update gamepad data
+        requestAnimationFrame(updateGamepadData);
+    }
+</script>
+

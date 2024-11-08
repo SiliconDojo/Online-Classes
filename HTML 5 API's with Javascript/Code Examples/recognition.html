@@ -1,0 +1,33 @@
+
+<h1>JavaScript Voice Recognition</h1>
+<button onclick="startListening()">Start Listening</button>
+<p id="transcript">Your speech will appear here...</p>
+
+<script>
+    // Check for browser support
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        alert("Your browser does not support Speech Recognition. Please try using Chrome or Edge.");
+    } else {
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-US'; // Set the language
+        recognition.interimResults = true; // Show words as spoken
+        recognition.maxAlternatives = 1;
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            document.getElementById("transcript").innerText = transcript;
+        };
+
+        recognition.onerror = (event) => {
+            console.error("Recognition error:", event.error);
+        };
+
+        // Function to start recognition
+        function startListening() {
+            recognition.start();
+            document.getElementById("transcript").innerText = "Listening...";
+        }
+    }
+</script>
+
