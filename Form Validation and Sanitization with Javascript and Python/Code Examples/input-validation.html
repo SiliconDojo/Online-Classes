@@ -1,0 +1,13 @@
+<input type="email" id="input" required>
+<button onclick="validate()">Validate</button>
+
+<script>
+    function validate() {
+        const input = document.getElementById("input");
+        if (input.validity.valid) {
+            alert("Valid -- " + input.value);
+        } else {
+            alert("NOT Valid -- " + input.value);
+        }
+    }
+</script>

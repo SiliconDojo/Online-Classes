@@ -1,0 +1,20 @@
+<input type="text" id="input" required>
+<button onclick="sanitize()">Validate</button>
+
+<script>
+
+    function removeHTMLTags(input) {
+            return input.replace(/<\/?[^>]+(>|$)/g, "");
+        }
+
+    function sanitize(){
+        const input = document.getElementById("input");
+        const clean = removeHTMLTags(input.value);
+
+        alert("Original -- " + input.value + "\nClean -- " + clean);
+    }
+</script>
+
+
+
+

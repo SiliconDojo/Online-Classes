@@ -1,0 +1,43 @@
+<form>
+    Name: <input type="text" id="name" required><br><br>
+    Age: <input type="number" id="age" required><br><br>
+    Email: <input type="email" id="input" required><br><br>
+    URL: <input type="url" id="website" required><br><br>
+    <input type="submit" value="Submit" onclick="validate(event)">
+</form>
+
+<script>
+    function validate(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name");
+        const age = document.getElementById("age");
+        const email = document.getElementById("input");
+        const website = document.getElementById("website");
+
+        let message = "";
+
+        if (!name.validity.valid) {
+            message += "Name is not valid\n";
+        }
+
+        if (!age.validity.valid) {
+            message += "Age is not valid\n";
+        }
+
+        if (!email.validity.valid) {
+            message += "Email is not valid\n";
+        }
+
+        if (!website.validity.valid) {
+            message += "URL is not valid\n";
+        }
+
+        if (message) {
+            alert(message);
+        } else {
+            alert("Form Valid");
+            //event.target.submit();
+        }
+    }
+</script>
