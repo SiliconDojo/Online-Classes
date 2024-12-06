@@ -1,0 +1,19 @@
+<div id="display"></div>
+
+<script>
+    const display = document.getElementById('display');
+
+    fetch('https://api.ipify.org')
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then((data) => {
+        display.innerHTML = `<h1>IP: ${data}</h1>`
+    })
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+</script>

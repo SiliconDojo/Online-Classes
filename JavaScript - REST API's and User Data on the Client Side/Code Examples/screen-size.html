@@ -1,0 +1,9 @@
+<div id="display"></div>
+
+<script>
+    const display = document.getElementById('display');
+    display.innerHTML =
+        `<p>Total Screen Size: ${screen.width} x ${screen.height}</p>
+        <p>Available Screen Size: ${screen.availWidth} x ${screen.availHeight}</p>
+        <p>Viewport Size: ${window.innerWidth} x ${window.innerHeight}</p>`;
+</script>

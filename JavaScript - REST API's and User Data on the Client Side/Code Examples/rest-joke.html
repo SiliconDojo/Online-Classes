@@ -1,0 +1,21 @@
+<div id="display"></div>
+
+<script>
+    const display = document.getElementById('display');
+
+    fetch('https://official-joke-api.appspot.com/random_joke')
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then((data) => {
+        display.innerHTML = `${JSON.stringify(data, null, 2)}<br>
+        Setup: ${data.setup}<br>
+        Punchline: ${data.punchline}<br>`
+    })
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+</script>

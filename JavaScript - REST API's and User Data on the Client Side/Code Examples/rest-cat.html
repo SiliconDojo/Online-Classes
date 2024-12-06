@@ -1,0 +1,20 @@
+<div id="display"></div>
+
+<script>
+    const display = document.getElementById('display');
+
+    fetch('https://cat-fact.herokuapp.com/facts/')
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then((data) => {
+        display.innerHTML = `<pre>${JSON.stringify(data, null, 2)}<pre><br>
+        <h1>${data[2].text}</h1>`
+    })
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+</script>

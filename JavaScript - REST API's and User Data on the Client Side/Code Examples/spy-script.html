@@ -1,0 +1,25 @@
+<h1>Spy Script</h1>
+<div id="display"></div>
+
+<script>
+    const display = document.getElementById('display');
+
+    fetch('http://ip-api.com/json/')
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+        display.innerHTML = `
+        User Agent: ${navigator.userAgent}<br>
+        City: ${data.city}<br>`
+
+        fetch(`http://localhost:8080/receive?userAgent=${navigator.userAgent}&city=${data.city}`)
+    })
+    .catch((error) => {
+        console.error('Error fetching IP data:', error);
+    });
+</script>
